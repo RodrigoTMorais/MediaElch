@@ -1,11 +1,7 @@
 #include "scrapers/movie/adultdvdempire/AdultDvdEmpire.h"
 
-#include "globals/Helper.h"
-#include "log/Log.h"
-#include "network/NetworkRequest.h"
 #include "scrapers/movie/adultdvdempire/AdultDvdEmpireScrapeJob.h"
 #include "scrapers/movie/adultdvdempire/AdultDvdEmpireSearchJob.h"
-#include "settings/Settings.h"
 
 #include <QTextDocument>
 

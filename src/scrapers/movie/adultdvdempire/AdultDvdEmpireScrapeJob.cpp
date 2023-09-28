@@ -144,9 +144,11 @@ void AdultDvdEmpireScrapeJob::parseAndAssignInfos(const QString& html)
         doc.setHtml(content);
         m_movie->setOverview(doc.toPlainText());
     }
-
-    rx.setPattern("href=\"([^\"]*)\"[\\s\\n]*id=\"front-cover\"");
+    //rx.setPattern("href=\"([^\"]*)\"[\\s\\n]*id=\"front-cover\"");
+    rx.setPattern("id=\"front-cover\"|href=\"([^\"]*jpg)\"");
     match = rx.match(html);
+    //qDebug() << match.captured(0);
+    //qDebug() << match.captured(1);
     if (match.hasMatch()) {
         Poster p;
         p.thumbUrl = match.captured(1);
